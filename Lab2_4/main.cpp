@@ -6,9 +6,29 @@
 //
 
 #include <iostream>
+#include <vector>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main() {
+    
+    int input = 0;
+    vector<int> nums;
+    
+    cout << "Enter the elements: ";
+    while(cin >> input){
+        nums.push_back(input);
+    }
+    
+//    nums.pop_back();
+    
+    // 找到最大值
+    int max_num = *max_element(nums.begin(), nums.end());
+    cout << "Maximum element: " << max_num << endl;
+    
+    // 找到最小值
+    int min_num = *min_element(nums.begin(), nums.end());
+    cout << "Minimum element: " << min_num << endl;
+    
     return 0;
 }
