@@ -7,8 +7,24 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+void swap(int* num1, int* num2) {
+     // Please fill this blank
+    int temp = 0;
+    
+    temp = *num2;
+    *num2 = *num1;
+    *num1 = temp;
+    
+    
+}
+int main() {
+    int a = 5;
+    int b = 10;
+    
+    std::cout << "Before swap: a = " << a << ", b = " << b << std::endl;
+    
+    swap(&a, &b);
+    std::cout << "After swap: a = " << a << ", b = " << b << std::endl;
+    
     return 0;
 }
