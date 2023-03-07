@@ -7,8 +7,24 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+struct Rectangle{
+    int length = 0;
+    int width = 0;
+};
+
+int main() {
+    
+    Rectangle rect;
+    
+    cout << "Enter the length:";
+    cin >> rect.length;
+    
+    cout << "Enter the width:";
+    cin >> rect.width;
+    
+    cout << "Area: " << rect.length * rect.width << endl;
+    cout << "Perimeter: " << 2*(rect.length + rect.width) << endl;
     return 0;
 }
